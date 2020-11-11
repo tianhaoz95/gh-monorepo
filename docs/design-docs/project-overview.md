@@ -16,27 +16,10 @@ The project aim to define a configuration that is necessary for all monorepo pro
 
 ## Detailed Design
 
-```yml
-gh_monorepo_config:
-    config_file: gh_monorepo_project.yml
-```
+### Information required
 
-```yml
-project:
-    name: Sample project
-    id: sample_project
-    deps:
-        - sample_project_1
-        - sample_project_2
-        - sample_project_3
-    workflow:
-        name: Sample workflow
-        on: [push, pull_request]
-        jobs:
-            example-job:
-                runs-on: ubuntu-latest
-                steps:
-                    - uses: actions/checkout@v2
-                    - name: Sample step
-                      run: echo hello world!
-```
+The following information is required for each sub-project:
+
+* Project ID
+* Dependencies
+* Workflows
