@@ -38,5 +38,5 @@ project:
                 steps:
                     - uses: actions/checkout@v2
                     - name: Sample step
-                    run: echo hello world!
+                      run: echo hello world!
 ```
